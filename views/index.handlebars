@@ -2,3 +2,15 @@
 
 
 <button onclick="loadArticles">Load new articles</button>
+
+
+
+{{#each data}}
+<div>
+    <h2>
+        {{this.header}}
+    </h2>
+    <h4>{{this.link}}</h4>
+</div>
+
+{{/each}}

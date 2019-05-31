@@ -23,16 +23,16 @@ axios.get("https://blokt.com/headlines/cryptocurrency").then(function(response) 
     var $ = cheerio.load(response.data);
     $("div.td_module_2").each(function(i, element){
         var header =  $(element).find("h3.td-module-title").text();
-        console.log(header);
         var link = $(element).find("h3.entry-title.td-module-title a").attr("href");
-        console.log(link);
         var image = $(element).find(".td-module-image > .td-module-thumb img").attr("data-img-url");
-        console.log(image);
+        var date = $(element).find(".td-module-meta-info > .td-post-date time").text();
+
         db.news_scraper_collections.insert(
             {
                 "header" : header,
                 "link" : link,
-                "image" : image
+                "image" : image,
+                "date": date
             }
         );
     })
