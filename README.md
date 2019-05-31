@@ -7,3 +7,5 @@ Dependencies:
 * mongoose
 * cheerio
 * axios
+* mongojs
+* body-parser
