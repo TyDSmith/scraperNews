@@ -1,10 +1,11 @@
 {
   "name": "scrapernews",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dependencies:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,6 @@
     "mongojs": "^2.6.0",
     "mongoose": "^5.5.11",
     "node": "^12.3.1"
-  }
+  },
+  "devDependencies": {}
 }
