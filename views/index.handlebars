@@ -1,16 +1,13 @@
-<h3>this is the index page</h3>
 
+<button onClick="location.href=location.href">Refresh Articles</button>
 
-<button onclick="loadArticles">Load new articles</button>
-
-
-
-{{#each data}}
-<div>
-    <h2>
-        {{this.header}}
-    </h2>
-    <h4>{{this.link}}</h4>
+<div class="article-list">
+    {{#each data}}
+    <div class="article-list-item">
+        <h2 class="article-list-title">
+            <a href="{{this.urlLink}}">{{this.articleTitle}}</a>
+        </h2>
+        <img src="{{this.articleImage}}" alt="" class="article-list-image">
+    </div>
+    {{/each}}
 </div>
-
-{{/each}}
